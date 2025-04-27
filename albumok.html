@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Albumok</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      padding: 20px;
+    }
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input {
+      flex: 1 1 200px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c2c2c;
+      color: #ffffff;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff0000;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e60000;
+    }
+    #albumok {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .album {
+      display: flex;
+      align-items: center;
+      background-color: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    .album img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffffff 10%, #212121 90%);
+      margin-right: 20px;
+    }
+    .album-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .album-content span {
+      margin: 2px 0;
+      font-size: 15px;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-left: 20px;
+    }
+    .actions button {
+      background-color: #2c2c2c;
+      color: #ff0000;
+      border: 1px solid #ff0000;
+      font-size: 18px;
+      border-radius: 4px;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .actions button:hover {
+      background-color: #ff0000;
+      color: #121212;
+    }
+  </style>
+</head>
+<body>
+  <h1>Albumok</h1>
+
+  <form id="album-form">
+    <input type="text" id="zenekar" placeholder="Zenekar" required>
+    <input type="text" id="cim" placeholder="Album címe" required>
+    <input type="number" id="ev" placeholder="Megjelenés éve" required>
+    <input type="text" id="mufaj" placeholder="Műfaj" required>
+    <button type="submit">Hozzáadás</button>
+  </form>
+
+  <div id="albumok"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

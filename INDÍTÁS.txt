@@ -1,0 +1,5 @@
+1. lépés -> Telepítse: npm install express sqlite3 cors body-parser
+
+2. lépés -> Futtassa: node server.js
+
+3. lépés -> Böngészőbe nyissa meg: http://localhost:3000/albumok.html
