@@ -49,6 +49,12 @@ app.delete('/albumok/:id', (req, res) => {
   });
 });
 
+
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/albumok.html');
+});
+
 app.listen(3000, () => {
   console.log('Server runs on: http://localhost:3000');
 });
